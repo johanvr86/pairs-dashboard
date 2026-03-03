@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pairs Dashboard</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --bg:        #0a0e17;
+    --surface:   #111827;
+    --border:    #1e2d40;
+    --text:      #e2e8f0;
+    --muted:     #64748b;
+    --entry:     #f97316;
+    --active:    #ef4444;
+    --watch:     #eab308;
+    --normal:    #22c55e;
+    --bot:       #3b82f6;
+    --accent:    #06b6d4;
+    --pos:       #22c55e;
+    --neg:       #ef4444;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    min-height: 100vh;
+  }
+
+  /* Grid noise texture overlay */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(6,182,212,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(6,182,212,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  #app { position: relative; z-index: 1; max-width: 1400px; margin: 0 auto; padding: 24px; }
+
+  /* Header */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: -0.5px;
+  }
+  .logo span { color: var(--muted); font-weight: 400; }
+  .header-right { display: flex; align-items: center; gap: 16px; }
+  #last-updated {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+  #refresh-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--accent);
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    transition: all 0.2s;
+  }
+  #refresh-btn:hover { background: var(--border); }
+  #refresh-btn.spinning { opacity: 0.5; pointer-events: none; }
+
+  /* Summary bar */
+  .summary-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .summary-card .label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-family: 'Space Mono', monospace;
+  }
+  .summary-card .value {
+    font-size: 26px;
+    font-weight: 600;
+    font-family: 'Space Mono', monospace;
+  }
+  .summary-card.signals  .value { color: var(--entry); }
+  .summary-card.watching .value { color: var(--watch); }
+  .summary-card.normal   .value { color: var(--normal); }
+  .summary-card.bots     .value { color: var(--bot); }
+
+  /* Section label */
+  .section-label {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+    margin-bottom: 12px;
+    padding-left: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* Grid of pair cards */
+  .pairs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+
+  .pair-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .pair-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--border);
+    transition: background 0.2s;
+  }
+  .pair-card.signal-active::before,
+  .pair-card.signal-entry::before  { background: var(--active); }
+  .pair-card.signal-watch::before  { background: var(--watch); }
+  .pair-card.signal-normal::before { background: var(--normal); }
+  .pair-card:hover { border-color: var(--accent); transform: translateY(-1px); }
+  .pair-card.selected { border-color: var(--accent); }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .pair-name {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .pair-theme {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .pair-badge {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .badge-bot    { background: rgba(59,130,246,0.15); color: var(--bot); border: 1px solid rgba(59,130,246,0.3); }
+  .badge-watch  { background: rgba(100,116,139,0.15); color: var(--muted); border: 1px solid var(--border); }
+
+  .z-display {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+  .z-value {
+    font-family: 'Space Mono', monospace;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    transition: color 0.3s;
+  }
+  .z-value.positive { color: var(--neg); }
+  .z-value.negative { color: var(--pos); }
+  .z-value.neutral  { color: var(--text); }
+  .z-label {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: 'Space Mono', monospace;
+  }
+
+  /* Z gauge bar */
+  .z-gauge {
+    height: 6px;
+    background: var(--border);
+    border-radius: 3px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: visible;
+  }
+  .z-gauge-fill {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+  }
+  .z-gauge-marker {
+    position: absolute;
+    top: -3px;
+    width: 2px;
+    height: 12px;
+    background: var(--muted);
+    border-radius: 1px;
+    transform: translateX(-50%);
+  }
+
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .signal-pill {
+    font-family: 'Space Mono', monospace;
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .pill-active, .pill-entry { background: rgba(239,68,68,0.15); color: var(--active); border: 1px solid rgba(239,68,68,0.3); animation: pulse 2s infinite; }
+  .pill-watch  { background: rgba(234,179,8,0.15);  color: var(--watch);  border: 1px solid rgba(234,179,8,0.3); }
+  .pill-normal { background: rgba(34,197,94,0.15);  color: var(--normal); border: 1px solid rgba(34,197,94,0.3); }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.6; }
+  }
+
+  .ratio-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* Mini sparkline */
+  .mini-chart { margin-top: 12px; height: 48px; }
+
+  /* Detail panel */
+  #detail-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 28px;
+    display: none;
+  }
+  #detail-panel.visible { display: block; }
+
+  .detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .detail-title {
+    font-family: 'Space Mono', monospace;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .detail-meta {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  #close-detail {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Space Mono', monospace;
+    font-size: 11px;
+  }
+  #close-detail:hover { color: var(--text); border-color: var(--text); }
+
+  .detail-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .stat-box {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+  }
+  .stat-box .slabel {
+    font-size: 10px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 4px;
+  }
+  .stat-box .svalue {
+    font-family: 'Space Mono', monospace;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  #detail-chart-container { height: 260px; position: relative; }
+
+  /* Signal direction text */
+  .signal-direction {
+    margin-top: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'Space Mono', monospace;
+    display: none;
+  }
+  .signal-direction.visible { display: block; }
+  .signal-direction.buy-a   { background: rgba(34,197,94,0.1);  border: 1px solid rgba(34,197,94,0.3);  color: var(--pos); }
+  .signal-direction.buy-b   { background: rgba(239,68,68,0.1);  border: 1px solid rgba(239,68,68,0.3);  color: var(--neg); }
+
+  /* Loading */
+  #loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    gap: 16px;
+  }
+  .spinner {
+    width: 32px; height: 32px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  #loading p { font-family: 'Space Mono', monospace; font-size: 12px; color: var(--muted); }
+
+  /* Error */
+  #error-msg {
+    display: none;
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.3);
+    color: var(--neg);
+    padding: 16px;
+    border-radius: 8px;
+    font-family: 'Space Mono', monospace;
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .summary-bar { grid-template-columns: repeat(2,1fr); }
+    .detail-stats { grid-template-columns: repeat(2,1fr); }
+    .pairs-grid   { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <header>
+    <div>
+      <div class="logo">PAIRS<span>/</span>MONITOR</div>
+      <div style="font-size:11px;color:var(--muted);margin-top:4px;">
+        Z-score dashboard — geopolitical pairs trading
+      </div>
+    </div>
+    <div class="header-right">
+      <div id="last-updated">—</div>
+      <button id="refresh-btn" onclick="loadData()">↻ REFRESH</button>
+    </div>
+  </header>
+
+  <div id="error-msg"></div>
+
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>fetching z-scores...</p>
+  </div>
+
+  <div id="content" style="display:none">
+
+    <div class="summary-bar">
+      <div class="summary-card signals">
+        <div class="label">Active Signals</div>
+        <div class="value" id="stat-signals">0</div>
+      </div>
+      <div class="summary-card watching">
+        <div class="label">Approaching</div>
+        <div class="value" id="stat-watching">0</div>
+      </div>
+      <div class="summary-card bots">
+        <div class="label">Live Bots</div>
+        <div class="value" id="stat-bots">4</div>
+      </div>
+      <div class="summary-card normal">
+        <div class="label">Normal Range</div>
+        <div class="value" id="stat-normal">0</div>
+      </div>
+    </div>
+
+    <div id="detail-panel">
+      <div class="detail-header">
+        <div>
+          <div class="detail-title" id="detail-name">—</div>
+          <div class="detail-meta" id="detail-meta">—</div>
+        </div>
+        <button id="close-detail" onclick="closeDetail()">✕ CLOSE</button>
+      </div>
+      <div class="detail-stats">
+        <div class="stat-box">
+          <div class="slabel">Current Z</div>
+          <div class="svalue" id="ds-z">—</div>
+        </div>
+        <div class="stat-box">
+          <div class="slabel">% to Entry</div>
+          <div class="svalue" id="ds-pct">—</div>
+        </div>
+        <div class="stat-box">
+          <div class="slabel">Ratio</div>
+          <div class="svalue" id="ds-ratio">—</div>
+        </div>
+        <div class="stat-box">
+          <div class="slabel">Mean (60d)</div>
+          <div class="svalue" id="ds-mean">—</div>
+        </div>
+      </div>
+      <div id="detail-chart-container">
+        <canvas id="detail-chart"></canvas>
+      </div>
+      <div class="signal-direction" id="signal-direction"></div>
+    </div>
+
+    <div class="section-label">Active bots</div>
+    <div class="pairs-grid" id="grid-bots"></div>
+
+    <div class="section-label" style="margin-top:8px;">Watchlist</div>
+    <div class="pairs-grid" id="grid-watch"></div>
+
+  </div>
+</div>
+
+<script>
+let DATA = null;
+let detailChart = null;
+let selectedPair = null;
+const miniCharts = {};
+
+const DATA_URL = 'data/zscores.json';
+
+async function loadData() {
+  const btn = document.getElementById('refresh-btn');
+  btn.classList.add('spinning');
+  btn.textContent = '↻ LOADING';
+  document.getElementById('error-msg').style.display = 'none';
+
+  try {
+    const r = await fetch(DATA_URL + '?t=' + Date.now());
+    if (!r.ok) throw new Error(`HTTP ${r.status}`);
+    DATA = await r.json();
+    render();
+  } catch(e) {
+    showError('Could not load data/zscores.json — ' + e.message +
+      '<br>Run fetch_zscores.py locally to generate data, or wait for GitHub Actions.');
+    document.getElementById('loading').style.display = 'none';
+  } finally {
+    btn.classList.remove('spinning');
+    btn.textContent = '↻ REFRESH';
+  }
+}
+
+function showError(msg) {
+  const el = document.getElementById('error-msg');
+  el.innerHTML = msg;
+  el.style.display = 'block';
+}
+
+function signalColor(signal) {
+  return { active:'var(--active)', entry:'var(--active)',
+           watch:'var(--watch)', normal:'var(--normal)' }[signal] || 'var(--muted)';
+}
+
+function zColor(z) {
+  if (Math.abs(z) >= 2.0) return z > 0 ? 'var(--neg)' : 'var(--pos)';
+  if (Math.abs(z) >= 1.5) return 'var(--watch)';
+  return 'var(--text)';
+}
+
+function gaugeHTML(z, entryZ) {
+  // Map z from [-4,+4] to [0,100]%
+  const pct    = Math.min(100, Math.max(0, (z + 4) / 8 * 100));
+  const midPct = 50;
+  const left   = Math.min(pct, midPct);
+  const width  = Math.abs(pct - midPct);
+  const color  = Math.abs(z) >= entryZ ? signalColor('active') :
+                 Math.abs(z) >= 1.5    ? signalColor('watch')  : 'var(--muted)';
+  const entryLow  = ((- entryZ + 4) / 8 * 100).toFixed(1);
+  const entryHigh = ((  entryZ + 4) / 8 * 100).toFixed(1);
+  return `
+    <div class="z-gauge">
+      <div class="z-gauge-fill" style="left:${left}%;width:${width}%;background:${color}"></div>
+      <div class="z-gauge-marker" style="left:${entryLow}%"></div>
+      <div class="z-gauge-marker" style="left:50%"></div>
+      <div class="z-gauge-marker" style="left:${entryHigh}%"></div>
+    </div>`;
+}
+
+function buildMiniChart(canvasId, history) {
+  const canvas = document.getElementById(canvasId);
+  if (!canvas || !history || history.zscores.length < 2) return;
+  if (miniCharts[canvasId]) { miniCharts[canvasId].destroy(); }
+
+  const entryZ = DATA.entry_z || 2.0;
+  const zs     = history.zscores;
+  const cols   = zs.map(z =>
+    Math.abs(z) >= entryZ ? 'rgba(239,68,68,0.8)' :
+    Math.abs(z) >= 1.5    ? 'rgba(234,179,8,0.6)' :
+                             'rgba(34,197,94,0.6)');
+
+  miniCharts[canvasId] = new Chart(canvas, {
+    type: 'line',
+    data: {
+      labels: history.dates,
+      datasets: [{
+        data: zs,
+        borderColor: 'rgba(6,182,212,0.6)',
+        borderWidth: 1.5,
+        pointRadius: 0,
+        tension: 0.3,
+        fill: false,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, tooltip: { enabled: false } },
+      scales: {
+        x: { display: false },
+        y: {
+          display: false,
+          min: Math.min(-3, Math.min(...zs) - 0.5),
+          max: Math.max( 3, Math.max(...zs) + 0.5),
+        }
+      },
+      animation: false,
+    }
+  });
+}
+
+function buildCard(name, pair) {
+  const entryZ   = DATA.entry_z || 2.0;
+  const z        = pair.cur_z;
+  const signal   = pair.signal;
+  const zClass   = z > 0 ? 'positive' : z < 0 ? 'negative' : 'neutral';
+  const badge    = pair.category === 'bot'
+    ? "<span class='pair-badge badge-bot'>BOT</span>"
+    : "<span class='pair-badge badge-watch'>WATCH</span>";
+
+  const pillClass = { active:'pill-active', entry:'pill-entry',
+                      watch:'pill-watch',   normal:'pill-normal' }[signal] || 'pill-normal';
+  const pillText  = { active:'SIGNAL', entry:'NEW SIGNAL',
+                      watch:'WATCH',   normal:'NORMAL' }[signal] || signal;
+
+  const tickers = pair.ticker_b
+    ? `${pair.ticker_a} / ${pair.ticker_b}`
+    : pair.ticker_a;
+
+  const canvasId = 'mini-' + name.replace(/[^a-zA-Z0-9]/g,'_');
+
+  return `
+    <div class="pair-card signal-${signal}" id="card-${canvasId}"
+         onclick="showDetail('${name}')">
+      <div class="card-header">
+        <div>
+          <div class="pair-name">${name}</div>
+          <div class="pair-theme">${pair.theme} — ${tickers}</div>
+        </div>
+        ${badge}
+      </div>
+      <div class="z-display">
+        <div class="z-value ${zClass}">${z > 0 ? '+' : ''}${z.toFixed(2)}</div>
+        <div class="z-label">σ</div>
+      </div>
+      ${gaugeHTML(z, entryZ)}
+      <div class="card-footer">
+        <span class="signal-pill ${pillClass}">${pillText}</span>
+        <span class="ratio-text">${pair.pct_to_entry.toFixed(0)}% to entry</span>
+      </div>
+      <div class="mini-chart">
+        <canvas id="${canvasId}" height="48"></canvas>
+      </div>
+    </div>`;
+}
+
+function render() {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
+  document.getElementById('last-updated').textContent = DATA.updated || '—';
+
+  const pairs   = DATA.pairs || {};
+  const names   = Object.keys(pairs);
+
+  // Stats
+  const signals  = names.filter(n => ['active','entry'].includes(pairs[n].signal)).length;
+  const watching = names.filter(n => pairs[n].signal === 'watch').length;
+  const normal   = names.filter(n => pairs[n].signal === 'normal').length;
+  document.getElementById('stat-signals').textContent = signals;
+  document.getElementById('stat-watching').textContent = watching;
+  document.getElementById('stat-normal').textContent = normal;
+
+  // Sort: signals first, then watch, then by abs z
+  const sorted = names.sort((a, b) => {
+    const order = { entry:0, active:1, watch:2, normal:3 };
+    const oa = order[pairs[a].signal] ?? 4;
+    const ob = order[pairs[b].signal] ?? 4;
+    if (oa !== ob) return oa - ob;
+    return Math.abs(pairs[b].cur_z) - Math.abs(pairs[a].cur_z);
+  });
+
+  const bots  = sorted.filter(n => pairs[n].category === 'bot');
+  const watch = sorted.filter(n => pairs[n].category !== 'bot');
+
+  document.getElementById('grid-bots').innerHTML  = bots.map(n  => buildCard(n, pairs[n])).join('');
+  document.getElementById('grid-watch').innerHTML = watch.map(n => buildCard(n, pairs[n])).join('');
+
+  // Build mini charts after DOM is ready
+  requestAnimationFrame(() => {
+    [...bots, ...watch].forEach(name => {
+      const id = 'mini-' + name.replace(/[^a-zA-Z0-9]/g,'_');
+      if (pairs[name].history) buildMiniChart(id, pairs[name].history);
+    });
+  });
+
+  // Reopen detail if one was selected
+  if (selectedPair && pairs[selectedPair]) showDetail(selectedPair);
+}
+
+function showDetail(name) {
+  if (!DATA || !DATA.pairs[name]) return;
+  selectedPair = name;
+  const p      = DATA.pairs[name];
+  const entryZ = DATA.entry_z || 2.0;
+
+  // Highlight selected card
+  document.querySelectorAll('.pair-card').forEach(c => c.classList.remove('selected'));
+  const id = 'card-mini-' + name.replace(/[^a-zA-Z0-9]/g,'_');
+  const card = document.getElementById(id);
+  if (card) card.classList.add('selected');
+
+  // Populate detail panel
+  document.getElementById('detail-name').textContent = name;
+  document.getElementById('detail-meta').textContent =
+    p.theme + ' — ' + (p.ticker_b ? p.ticker_a + ' / ' + p.ticker_b : p.ticker_a) +
+    ' — Updated ' + (p.last_updated || DATA.updated);
+
+  const z = p.cur_z;
+  const dsZ = document.getElementById('ds-z');
+  dsZ.textContent = (z > 0 ? '+' : '') + z.toFixed(3) + 'σ';
+  dsZ.style.color = zColor(z);
+  document.getElementById('ds-pct').textContent   = p.pct_to_entry.toFixed(1) + '%';
+  document.getElementById('ds-ratio').textContent = p.cur_ratio.toFixed(4);
+  document.getElementById('ds-mean').textContent  = p.mean_ratio.toFixed(4);
+
+  // Signal direction
+  const dir = document.getElementById('signal-direction');
+  if (Math.abs(z) >= 1.5 && p.ticker_b) {
+    dir.classList.add('visible');
+    if (z < 0) {
+      dir.className = 'signal-direction visible buy-a';
+      dir.innerHTML = '▲ ' + p.ticker_a + ' cheap vs ' + p.ticker_b +
+        ' — rotation: hold ' + p.ticker_a + ' when z &lt; -' + entryZ;
+    } else {
+      dir.className = 'signal-direction visible buy-b';
+      dir.innerHTML = '▲ ' + p.ticker_b + ' cheap vs ' + p.ticker_a +
+        ' — rotation: hold ' + p.ticker_b + ' when z &gt; +' + entryZ;
+    }
+  } else {
+    dir.classList.remove('visible');
+  }
+
+  // Detail chart
+  if (detailChart) { detailChart.destroy(); detailChart = null; }
+  const hist   = p.history;
+  if (!hist || hist.zscores.length < 2) return;
+
+  const panel = document.getElementById('detail-panel');
+  panel.classList.add('visible');
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  const ctx = document.getElementById('detail-chart').getContext('2d');
+  const zs  = hist.zscores;
+  const pointColors = zs.map(v =>
+    Math.abs(v) >= entryZ ? 'rgba(239,68,68,0.9)' :
+    Math.abs(v) >= 1.5    ? 'rgba(234,179,8,0.9)' :
+                             'rgba(34,197,94,0.9)');
+
+  detailChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: hist.dates,
+      datasets: [
+        {
+          label: 'Z-Score',
+          data: zs,
+          borderColor: 'rgba(6,182,212,0.9)',
+          borderWidth: 2,
+          pointRadius: zs.map(v => Math.abs(v) >= 1.5 ? 4 : 2),
+          pointBackgroundColor: pointColors,
+          pointBorderWidth: 0,
+          tension: 0.3,
+          fill: {
+            target: { value: 0 },
+            above: 'rgba(239,68,68,0.05)',
+            below: 'rgba(34,197,94,0.05)',
+          },
+          yAxisID: 'y',
+        },
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: 'rgba(17,24,39,0.95)',
+          borderColor: 'rgba(30,45,64,1)',
+          borderWidth: 1,
+          titleFont: { family: 'Space Mono', size: 11 },
+          bodyFont:  { family: 'Space Mono', size: 12 },
+          callbacks: {
+            label: ctx => {
+              const v = ctx.parsed.y;
+              return ' z = ' + (v > 0 ? '+' : '') + v.toFixed(3) + 'σ';
+            }
+          }
+        },
+      },
+      scales: {
+        x: {
+          grid:  { color: 'rgba(30,45,64,0.8)' },
+          ticks: {
+            color: 'rgba(100,116,139,0.8)',
+            font:  { family: 'Space Mono', size: 10 },
+            maxTicksLimit: 8,
+          }
+        },
+        y: {
+          grid:  { color: 'rgba(30,45,64,0.8)' },
+          ticks: {
+            color: 'rgba(100,116,139,0.8)',
+            font:  { family: 'Space Mono', size: 10 },
+            callback: v => (v > 0 ? '+' : '') + v.toFixed(1) + 'σ',
+          },
+        }
+      },
+      // Reference lines drawn as annotation-like dataset approach
+      // We use chartjs native annotation via the dataset
+    },
+    plugins: [{
+      // Draw entry/exit reference lines manually
+      id: 'reflines',
+      afterDraw(chart) {
+        const ctx  = chart.ctx;
+        const area = chart.chartArea;
+        const ysc  = chart.scales.y;
+        const lines = [
+          { v:  entryZ, color: 'rgba(239,68,68,0.5)',  dash: [6,3] },
+          { v: -entryZ, color: 'rgba(34,197,94,0.5)',  dash: [6,3] },
+          { v:  0,      color: 'rgba(100,116,139,0.4)', dash: [] },
+        ];
+        lines.forEach(({ v, color, dash }) => {
+          const y = ysc.getPixelForValue(v);
+          if (y < area.top || y > area.bottom) return;
+          ctx.save();
+          ctx.strokeStyle = color;
+          ctx.lineWidth   = v === 0 ? 1 : 1.5;
+          ctx.setLineDash(dash);
+          ctx.beginPath();
+          ctx.moveTo(area.left, y);
+          ctx.lineTo(area.right, y);
+          ctx.stroke();
+          ctx.restore();
+        });
+      }
+    }]
+  });
+}
+
+function closeDetail() {
+  document.getElementById('detail-panel').classList.remove('visible');
+  document.querySelectorAll('.pair-card').forEach(c => c.classList.remove('selected'));
+  selectedPair = null;
+}
+
+// Auto-refresh every 15 minutes
+setInterval(loadData, 15 * 60 * 1000);
+
+// Initial load
+loadData();
+</script>
+</body>
+</html>
