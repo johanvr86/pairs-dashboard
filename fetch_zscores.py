@@ -117,6 +117,9 @@ def run():
                     "dates":    [str(d.date()) for d in hist_z.index],
                     "zscores":  [round(float(v), 3) for v in hist_z.values],
                     "ratios":   [round(float(v), 4) for v in hist_r.values],
+                    "prices_a": [round(float(v), 4) for v in a_aligned.loc[hist_z.index].values],
+                    "prices_b": [round(float(v), 4) for v in b_aligned.loc[hist_z.index].values] if b_aligned is not None else [],
+                    "timestamps": [datetime.utcnow().strftime("%H:%M UTC") if str(d.date()) == str(date.today()) else "close" for d in hist_z.index],
                 }
             }
             print(f"  + {name:<20} z={cur_z:+.2f}  [{signal}]")

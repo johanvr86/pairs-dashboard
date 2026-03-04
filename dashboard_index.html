@@ -777,33 +777,35 @@ function showDetail(name) {
           borderWidth: 1,
           titleFont: { family: 'Space Mono', size: 11 },
           bodyFont:  { family: 'Space Mono', size: 12 },
+          padding: 12,
           callbacks: {
-            title: ctx => ctx[0].label,
-            label: ctx => {
-              const idx = ctx.dataIndex;
-              const v   = ctx.parsed.y;
-              const p   = DATA.pairs[selectedPair];
-              const lines = [
-                ' z = ' + (v > 0 ? '+' : '') + v.toFixed(3) + 'σ',
-              ];
-              if (p && p.history && p.history.ratios) {
-                const ratio = p.history.ratios[idx];
-                lines.push(' ratio = ' + ratio.toFixed(4));
-              }
-              if (p && p.history && p.history.dates) {
-                lines.push(' ' + p.history.dates[idx]);
+            title: function(items) {
+              var idx = items[0].dataIndex;
+              var p   = DATA && selectedPair ? DATA.pairs[selectedPair] : null;
+              var date = items[0].label;
+              var ts  = (p && p.history && p.history.timestamps && p.history.timestamps[idx])
+                        ? p.history.timestamps[idx] : 'close';
+              return date + '  ●  ' + ts;
+            },
+            label: function(item) {
+              var idx = item.dataIndex;
+              var v   = item.parsed.y;
+              var p   = DATA && selectedPair ? DATA.pairs[selectedPair] : null;
+              var lines = [];
+              lines.push(' z-score  : ' + (v > 0 ? '+' : '') + v.toFixed(3) + 'σ');
+              if (p && p.history) {
+                if (p.history.ratios && p.history.ratios[idx] !== undefined) {
+                  lines.push(' ratio    : ' + p.history.ratios[idx].toFixed(4));
+                }
+                if (p.history.prices_a && p.history.prices_a[idx] !== undefined) {
+                  lines.push(' ' + (p.ticker_a || 'A') + '  : ' + p.history.prices_a[idx].toFixed(2));
+                }
+                if (p.history.prices_b && p.history.prices_b[idx] !== undefined && p.ticker_b) {
+                  lines.push(' ' + (p.ticker_b || 'B') + '  : ' + p.history.prices_b[idx].toFixed(2));
+                }
               }
               return lines;
             }
-          }
-        },
-```
-
-This shows three lines on hover:
-```
-2026-02-14
-z = -1.847σ
-ratio = 4.6231
           }
         },
       },
