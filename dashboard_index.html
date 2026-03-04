@@ -778,10 +778,32 @@ function showDetail(name) {
           titleFont: { family: 'Space Mono', size: 11 },
           bodyFont:  { family: 'Space Mono', size: 12 },
           callbacks: {
+            title: ctx => ctx[0].label,
             label: ctx => {
-              const v = ctx.parsed.y;
-              return ' z = ' + (v > 0 ? '+' : '') + v.toFixed(3) + 'σ';
+              const idx = ctx.dataIndex;
+              const v   = ctx.parsed.y;
+              const p   = DATA.pairs[selectedPair];
+              const lines = [
+                ' z = ' + (v > 0 ? '+' : '') + v.toFixed(3) + 'σ',
+              ];
+              if (p && p.history && p.history.ratios) {
+                const ratio = p.history.ratios[idx];
+                lines.push(' ratio = ' + ratio.toFixed(4));
+              }
+              if (p && p.history && p.history.dates) {
+                lines.push(' ' + p.history.dates[idx]);
+              }
+              return lines;
             }
+          }
+        },
+```
+
+This shows three lines on hover:
+```
+2026-02-14
+z = -1.847σ
+ratio = 4.6231
           }
         },
       },
