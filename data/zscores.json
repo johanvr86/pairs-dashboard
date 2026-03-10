@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-10 21:19 UTC",
+  "updated": "2026-03-10 21:47 UTC",
   "entry_z": 2.0,
   "lookback": 60,
   "pairs": {
@@ -15,7 +15,7 @@
       "mean_ratio": 1.071,
       "signal": "active",
       "pct_to_entry": 209.2,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-03",
@@ -423,7 +423,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -439,7 +439,7 @@
       "mean_ratio": 5.3297,
       "signal": "normal",
       "pct_to_entry": 63.5,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-03",
@@ -847,7 +847,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -863,7 +863,7 @@
       "mean_ratio": 4.8949,
       "signal": "normal",
       "pct_to_entry": 34.4,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-04",
@@ -1265,7 +1265,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -1281,7 +1281,7 @@
       "mean_ratio": 81.7429,
       "signal": "normal",
       "pct_to_entry": 28.2,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-03",
@@ -1622,7 +1622,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -1638,7 +1638,7 @@
       "mean_ratio": 0.491,
       "signal": "normal",
       "pct_to_entry": 9.9,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-03",
@@ -2046,7 +2046,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -2062,7 +2062,7 @@
       "mean_ratio": 1.0011,
       "signal": "normal",
       "pct_to_entry": 36.2,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-04",
@@ -2464,7 +2464,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -2480,7 +2480,7 @@
       "mean_ratio": 54.4151,
       "signal": "normal",
       "pct_to_entry": 65.4,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-04",
@@ -2761,7 +2761,7 @@
           86.7726,
           87.2492,
           87.1698,
-          87.5868,
+          87.5867,
           87.2598,
           87.0705,
           87.21,
@@ -2882,7 +2882,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -2898,7 +2898,7 @@
       "mean_ratio": 2.2268,
       "signal": "active",
       "pct_to_entry": 159.4,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-04",
@@ -3300,7 +3300,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -3316,7 +3316,7 @@
       "mean_ratio": 1.4423,
       "signal": "normal",
       "pct_to_entry": 52.5,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-04",
@@ -3718,7 +3718,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -3734,7 +3734,7 @@
       "mean_ratio": 0.0012,
       "signal": "normal",
       "pct_to_entry": 55.2,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-03",
@@ -4142,7 +4142,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -4158,7 +4158,7 @@
       "mean_ratio": 0.0194,
       "signal": "active",
       "pct_to_entry": 129.4,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-04",
@@ -4560,7 +4560,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -4570,13 +4570,13 @@
       "ticker_b": "GC=F",
       "theme": "Dollar confidence",
       "category": "watch",
-      "cur_z": -1.034,
+      "cur_z": -1.035,
       "prev_z": -0.772,
       "cur_ratio": 0.019,
       "mean_ratio": 0.0206,
       "signal": "normal",
       "pct_to_entry": 51.7,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-03",
@@ -4712,7 +4712,7 @@
           -0.748,
           -0.951,
           -0.772,
-          -1.034
+          -1.035
         ],
         "ratios": [
           0.0235,
@@ -4848,7 +4848,7 @@
           99.32,
           98.99,
           99.18,
-          98.944
+          98.935
         ],
         "prices_b": [
           4199.2998,
@@ -4984,7 +4984,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     },
@@ -5000,7 +5000,7 @@
       "mean_ratio": 1.2337,
       "signal": "normal",
       "pct_to_entry": 55.8,
-      "last_updated": "2026-03-10 21:19 UTC",
+      "last_updated": "2026-03-10 21:47 UTC",
       "history": {
         "dates": [
           "2025-12-03",
@@ -5408,7 +5408,7 @@
           "close",
           "close",
           "close",
-          "21:19 UTC"
+          "21:47 UTC"
         ]
       }
     }
