@@ -1,5 +1,5 @@
 {
-  "updated": "2026-03-12 21:25 UTC",
+  "updated": "2026-03-12 21:53 UTC",
   "entry_z": 2.0,
   "lookback": 60,
   "pairs": {
@@ -15,7 +15,7 @@
       "mean_ratio": 1.0706,
       "signal": "entry",
       "pct_to_entry": 215.7,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-05",
@@ -423,7 +423,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -439,7 +439,7 @@
       "mean_ratio": 5.2925,
       "signal": "normal",
       "pct_to_entry": 57.2,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-05",
@@ -847,7 +847,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -863,7 +863,7 @@
       "mean_ratio": 4.8887,
       "signal": "normal",
       "pct_to_entry": 61.7,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-08",
@@ -1265,7 +1265,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -1281,7 +1281,7 @@
       "mean_ratio": 82.4803,
       "signal": "normal",
       "pct_to_entry": 6.3,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-05",
@@ -1622,7 +1622,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -1638,7 +1638,7 @@
       "mean_ratio": 0.4909,
       "signal": "normal",
       "pct_to_entry": 17.5,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-05",
@@ -2046,7 +2046,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -2062,7 +2062,7 @@
       "mean_ratio": 0.9993,
       "signal": "normal",
       "pct_to_entry": 27.1,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-08",
@@ -2464,7 +2464,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -2480,7 +2480,7 @@
       "mean_ratio": 54.8488,
       "signal": "normal",
       "pct_to_entry": 54.4,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-08",
@@ -2882,7 +2882,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -2898,7 +2898,7 @@
       "mean_ratio": 2.2805,
       "signal": "active",
       "pct_to_entry": 186.9,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-08",
@@ -3300,7 +3300,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -3316,7 +3316,7 @@
       "mean_ratio": 1.4358,
       "signal": "normal",
       "pct_to_entry": 54.7,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-08",
@@ -3718,7 +3718,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -3734,7 +3734,7 @@
       "mean_ratio": 0.0012,
       "signal": "normal",
       "pct_to_entry": 46.4,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-05",
@@ -4142,7 +4142,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -4158,7 +4158,7 @@
       "mean_ratio": 0.0193,
       "signal": "active",
       "pct_to_entry": 118.8,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-08",
@@ -4560,7 +4560,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -4576,7 +4576,7 @@
       "mean_ratio": 0.0205,
       "signal": "normal",
       "pct_to_entry": 29.3,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:52 UTC",
       "history": {
         "dates": [
           "2025-12-05",
@@ -4848,7 +4848,7 @@
           99.18,
           98.83,
           99.23,
-          99.742
+          99.74
         ],
         "prices_b": [
           4212.8999,
@@ -4984,7 +4984,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:52 UTC"
         ]
       }
     },
@@ -5000,7 +5000,7 @@
       "mean_ratio": 1.2368,
       "signal": "normal",
       "pct_to_entry": 42.1,
-      "last_updated": "2026-03-12 21:25 UTC",
+      "last_updated": "2026-03-12 21:53 UTC",
       "history": {
         "dates": [
           "2025-12-05",
@@ -5408,7 +5408,7 @@
           "close",
           "close",
           "close",
-          "21:25 UTC"
+          "21:53 UTC"
         ]
       }
     }
