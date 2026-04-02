@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-02 22:20 UTC",
+  "updated": "2026-04-02 22:55 UTC",
   "entry_z": 2.0,
   "lookback": 60,
   "pairs": {
@@ -15,7 +15,7 @@
       "mean_ratio": 1.0798,
       "signal": "active",
       "pct_to_entry": 170.9,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-26",
@@ -429,7 +429,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -441,11 +441,11 @@
       "category": "bot",
       "cur_z": 0.028,
       "prev_z": -0.3,
-      "cur_ratio": 5.147,
+      "cur_ratio": 5.1469,
       "mean_ratio": 5.1389,
       "signal": "normal",
       "pct_to_entry": 1.4,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-26",
@@ -652,7 +652,7 @@
           5.1126,
           5.1457,
           5.0583,
-          5.147
+          5.1469
         ],
         "prices_a": [
           25863.25,
@@ -721,7 +721,7 @@
           23139.75,
           23915.0,
           24194.75,
-          24204.75
+          24204.5
         ],
         "prices_b": [
           4529.1001,
@@ -859,7 +859,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -875,7 +875,7 @@
       "mean_ratio": 4.8507,
       "signal": "normal",
       "pct_to_entry": 17.1,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -1283,7 +1283,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -1299,7 +1299,7 @@
       "mean_ratio": 83.2642,
       "signal": "normal",
       "pct_to_entry": 47.2,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-26",
@@ -1645,7 +1645,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -1661,7 +1661,7 @@
       "mean_ratio": 0.4978,
       "signal": "normal",
       "pct_to_entry": 59.4,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-26",
@@ -2075,7 +2075,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -2091,7 +2091,7 @@
       "mean_ratio": 0.995,
       "signal": "normal",
       "pct_to_entry": 10.4,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -2499,7 +2499,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -2515,7 +2515,7 @@
       "mean_ratio": 55.91,
       "signal": "normal",
       "pct_to_entry": 32.2,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -2793,7 +2793,7 @@
           87.0956,
           86.888,
           86.1957,
-          86.0672,
+          86.0671,
           86.4924,
           86.3144,
           86.8187,
@@ -2923,7 +2923,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -2939,7 +2939,7 @@
       "mean_ratio": 2.7652,
       "signal": "entry",
       "pct_to_entry": 105.2,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -3347,7 +3347,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -3363,7 +3363,7 @@
       "mean_ratio": 1.385,
       "signal": "normal",
       "pct_to_entry": 38.3,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -3771,7 +3771,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -3787,7 +3787,7 @@
       "mean_ratio": 0.0012,
       "signal": "normal",
       "pct_to_entry": 19.1,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-26",
@@ -4201,7 +4201,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -4217,7 +4217,7 @@
       "mean_ratio": 0.0193,
       "signal": "normal",
       "pct_to_entry": 26.2,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -4625,7 +4625,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -4641,7 +4641,7 @@
       "mean_ratio": 0.0202,
       "signal": "normal",
       "pct_to_entry": 40.5,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-26",
@@ -5055,7 +5055,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     },
@@ -5071,7 +5071,7 @@
       "mean_ratio": 1.2751,
       "signal": "normal",
       "pct_to_entry": 43.8,
-      "last_updated": "2026-04-02 22:20 UTC",
+      "last_updated": "2026-04-02 22:55 UTC",
       "history": {
         "dates": [
           "2025-12-26",
@@ -5485,7 +5485,7 @@
           "close",
           "close",
           "close",
-          "22:20 UTC"
+          "22:55 UTC"
         ]
       }
     }
