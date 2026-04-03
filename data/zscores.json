@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-03 19:59 UTC",
+  "updated": "2026-04-03 20:33 UTC",
   "entry_z": 2.0,
   "lookback": 60,
   "pairs": {
@@ -15,7 +15,7 @@
       "mean_ratio": 1.0799,
       "signal": "active",
       "pct_to_entry": 165.3,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -439,7 +439,7 @@
       "mean_ratio": 5.1399,
       "signal": "normal",
       "pct_to_entry": 11.4,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -863,7 +863,7 @@
       "mean_ratio": 4.8507,
       "signal": "normal",
       "pct_to_entry": 17.1,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -1287,7 +1287,7 @@
       "mean_ratio": 83.257,
       "signal": "normal",
       "pct_to_entry": 49.1,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -1644,7 +1644,7 @@
       "mean_ratio": 0.4978,
       "signal": "normal",
       "pct_to_entry": 59.7,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -2068,7 +2068,7 @@
       "mean_ratio": 0.995,
       "signal": "normal",
       "pct_to_entry": 10.4,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -2492,7 +2492,7 @@
       "mean_ratio": 55.9002,
       "signal": "normal",
       "pct_to_entry": 43.0,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -2639,7 +2639,7 @@
           51.9288,
           51.2481,
           51.5109,
-          51.638,
+          51.6381,
           53.1061,
           52.8415,
           52.9611,
@@ -2782,10 +2782,10 @@
           87.333,
           86.8286,
           85.6914,
-          86.3441,
+          86.344,
           86.7198,
           86.9572,
-          87.3725,
+          87.3726,
           86.8286,
           86.6308,
           86.6506,
@@ -2916,7 +2916,7 @@
       "mean_ratio": 2.7649,
       "signal": "entry",
       "pct_to_entry": 104.0,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -3340,7 +3340,7 @@
       "mean_ratio": 1.385,
       "signal": "normal",
       "pct_to_entry": 38.3,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -3764,7 +3764,7 @@
       "mean_ratio": 0.0012,
       "signal": "normal",
       "pct_to_entry": 8.2,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -4188,7 +4188,7 @@
       "mean_ratio": 0.0193,
       "signal": "normal",
       "pct_to_entry": 39.8,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -4612,7 +4612,7 @@
       "mean_ratio": 0.0202,
       "signal": "normal",
       "pct_to_entry": 49.5,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
@@ -5036,7 +5036,7 @@
       "mean_ratio": 1.2751,
       "signal": "normal",
       "pct_to_entry": 44.0,
-      "last_updated": "2026-04-03 19:59 UTC",
+      "last_updated": "2026-04-03 20:33 UTC",
       "history": {
         "dates": [
           "2025-12-29",
