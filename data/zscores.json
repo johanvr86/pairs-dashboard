@@ -1,5 +1,5 @@
 {
-  "updated": "2026-04-10 22:23 UTC",
+  "updated": "2026-04-10 23:00 UTC",
   "entry_z": 2.0,
   "lookback": 60,
   "pairs": {
@@ -15,7 +15,7 @@
       "mean_ratio": 1.0725,
       "signal": "active",
       "pct_to_entry": 102.8,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 22:59 UTC",
       "history": {
         "dates": [
           "2026-01-06",
@@ -423,7 +423,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "22:59 UTC"
         ]
       }
     },
@@ -439,7 +439,7 @@
       "mean_ratio": 5.1012,
       "signal": "normal",
       "pct_to_entry": 44.4,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 22:59 UTC",
       "history": {
         "dates": [
           "2026-01-06",
@@ -847,7 +847,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "22:59 UTC"
         ]
       }
     },
@@ -863,7 +863,7 @@
       "mean_ratio": 4.8455,
       "signal": "normal",
       "pct_to_entry": 59.6,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 22:59 UTC",
       "history": {
         "dates": [
           "2026-01-07",
@@ -1265,7 +1265,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "22:59 UTC"
         ]
       }
     },
@@ -1281,7 +1281,7 @@
       "mean_ratio": 82.7702,
       "signal": "normal",
       "pct_to_entry": 30.9,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 22:59 UTC",
       "history": {
         "dates": [
           "2026-01-06",
@@ -1622,7 +1622,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "22:59 UTC"
         ]
       }
     },
@@ -1638,7 +1638,7 @@
       "mean_ratio": 0.4983,
       "signal": "normal",
       "pct_to_entry": 46.2,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 22:59 UTC",
       "history": {
         "dates": [
           "2026-01-06",
@@ -2046,7 +2046,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "22:59 UTC"
         ]
       }
     },
@@ -2062,7 +2062,7 @@
       "mean_ratio": 0.9958,
       "signal": "normal",
       "pct_to_entry": 71.9,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 22:59 UTC",
       "history": {
         "dates": [
           "2026-01-07",
@@ -2464,7 +2464,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "22:59 UTC"
         ]
       }
     },
@@ -2480,7 +2480,7 @@
       "mean_ratio": 56.104,
       "signal": "normal",
       "pct_to_entry": 19.1,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 23:00 UTC",
       "history": {
         "dates": [
           "2026-01-07",
@@ -2760,10 +2760,10 @@
           87.333,
           86.8286,
           85.6914,
-          86.3441,
+          86.344,
           86.7198,
           86.9572,
-          87.3725,
+          87.3726,
           86.8286,
           86.6308,
           86.6506,
@@ -2882,7 +2882,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "23:00 UTC"
         ]
       }
     },
@@ -2898,7 +2898,7 @@
       "mean_ratio": 2.9318,
       "signal": "normal",
       "pct_to_entry": 44.1,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 23:00 UTC",
       "history": {
         "dates": [
           "2026-01-07",
@@ -3300,7 +3300,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "23:00 UTC"
         ]
       }
     },
@@ -3316,7 +3316,7 @@
       "mean_ratio": 1.3663,
       "signal": "normal",
       "pct_to_entry": 3.2,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 23:00 UTC",
       "history": {
         "dates": [
           "2026-01-07",
@@ -3718,7 +3718,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "23:00 UTC"
         ]
       }
     },
@@ -3734,7 +3734,7 @@
       "mean_ratio": 0.0012,
       "signal": "normal",
       "pct_to_entry": 58.0,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 23:00 UTC",
       "history": {
         "dates": [
           "2026-01-06",
@@ -4142,7 +4142,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "23:00 UTC"
         ]
       }
     },
@@ -4158,7 +4158,7 @@
       "mean_ratio": 0.0193,
       "signal": "watch",
       "pct_to_entry": 80.2,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 23:00 UTC",
       "history": {
         "dates": [
           "2026-01-07",
@@ -4560,7 +4560,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "23:00 UTC"
         ]
       }
     },
@@ -4576,7 +4576,7 @@
       "mean_ratio": 0.0202,
       "signal": "normal",
       "pct_to_entry": 21.6,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 23:00 UTC",
       "history": {
         "dates": [
           "2026-01-06",
@@ -4984,7 +4984,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "23:00 UTC"
         ]
       }
     },
@@ -5000,7 +5000,7 @@
       "mean_ratio": 1.2854,
       "signal": "normal",
       "pct_to_entry": 8.6,
-      "last_updated": "2026-04-10 22:23 UTC",
+      "last_updated": "2026-04-10 23:00 UTC",
       "history": {
         "dates": [
           "2026-01-06",
@@ -5408,7 +5408,7 @@
           "close",
           "close",
           "close",
-          "22:23 UTC"
+          "23:00 UTC"
         ]
       }
     }
