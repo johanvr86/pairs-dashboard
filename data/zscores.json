@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-19 20:09 UTC",
+  "updated": "2026-06-19 21:39 UTC",
   "entry_z": 2.0,
   "lookback": 60,
   "pairs": {
@@ -15,7 +15,7 @@
       "mean_ratio": 1.0523,
       "signal": "normal",
       "pct_to_entry": 0.8,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -423,7 +423,7 @@
           "close",
           "close",
           "close",
-          "20:09 UTC"
+          "21:39 UTC"
         ]
       }
     },
@@ -439,7 +439,7 @@
       "mean_ratio": 6.1455,
       "signal": "watch",
       "pct_to_entry": 92.0,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -847,7 +847,7 @@
           "close",
           "close",
           "close",
-          "20:09 UTC"
+          "21:39 UTC"
         ]
       }
     },
@@ -863,7 +863,7 @@
       "mean_ratio": 5.2769,
       "signal": "watch",
       "pct_to_entry": 75.1,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -1281,7 +1281,7 @@
       "mean_ratio": 74.6391,
       "signal": "watch",
       "pct_to_entry": 94.3,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -1622,7 +1622,7 @@
           "close",
           "close",
           "close",
-          "20:09 UTC"
+          "21:39 UTC"
         ]
       }
     },
@@ -1638,7 +1638,7 @@
       "mean_ratio": 0.5229,
       "signal": "normal",
       "pct_to_entry": 55.4,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -2056,7 +2056,7 @@
       "mean_ratio": 1.2075,
       "signal": "normal",
       "pct_to_entry": 62.9,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -2474,7 +2474,7 @@
       "mean_ratio": 53.4947,
       "signal": "entry",
       "pct_to_entry": 116.1,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -2750,10 +2750,10 @@
           84.8402,
           85.3937,
           85.0181,
-          85.8386,
+          85.8385,
           85.117,
           84.6524,
-          85.7793,
+          85.7792,
           85.6903,
           85.6059,
           86.1319,
@@ -2892,7 +2892,7 @@
       "mean_ratio": 3.5906,
       "signal": "active",
       "pct_to_entry": 111.3,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -3310,7 +3310,7 @@
       "mean_ratio": 1.3942,
       "signal": "normal",
       "pct_to_entry": 14.0,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -3728,7 +3728,7 @@
       "mean_ratio": 0.0013,
       "signal": "watch",
       "pct_to_entry": 82.0,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -4136,7 +4136,7 @@
           "close",
           "close",
           "close",
-          "20:09 UTC"
+          "21:39 UTC"
         ]
       }
     },
@@ -4152,7 +4152,7 @@
       "mean_ratio": 0.0227,
       "signal": "normal",
       "pct_to_entry": 57.0,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -4570,7 +4570,7 @@
       "mean_ratio": 0.0218,
       "signal": "active",
       "pct_to_entry": 113.5,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
@@ -4978,7 +4978,7 @@
           "close",
           "close",
           "close",
-          "20:09 UTC"
+          "21:39 UTC"
         ]
       }
     },
@@ -4994,7 +4994,7 @@
       "mean_ratio": 1.3609,
       "signal": "active",
       "pct_to_entry": 101.0,
-      "last_updated": "2026-06-19 20:09 UTC",
+      "last_updated": "2026-06-19 21:39 UTC",
       "history": {
         "dates": [
           "2026-03-18",
