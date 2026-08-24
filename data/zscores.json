@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-24 21:15 UTC",
+  "updated": "2026-08-24 21:49 UTC",
   "entry_z": 2.0,
   "lookback": 60,
   "pairs": {
@@ -15,7 +15,7 @@
       "mean_ratio": 1.0555,
       "signal": "normal",
       "pct_to_entry": 74.1,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-19",
@@ -429,7 +429,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -445,7 +445,7 @@
       "mean_ratio": 7.0143,
       "signal": "active",
       "pct_to_entry": 149.2,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-19",
@@ -859,7 +859,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -875,7 +875,7 @@
       "mean_ratio": 5.447,
       "signal": "entry",
       "pct_to_entry": 103.6,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-20",
@@ -1283,7 +1283,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -1299,7 +1299,7 @@
       "mean_ratio": 63.1899,
       "signal": "normal",
       "pct_to_entry": 53.7,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-19",
@@ -1645,7 +1645,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -1661,7 +1661,7 @@
       "mean_ratio": 0.5389,
       "signal": "watch",
       "pct_to_entry": 82.7,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-19",
@@ -2075,7 +2075,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -2091,7 +2091,7 @@
       "mean_ratio": 1.3179,
       "signal": "watch",
       "pct_to_entry": 82.2,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-20",
@@ -2499,7 +2499,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -2515,7 +2515,7 @@
       "mean_ratio": 50.2594,
       "signal": "active",
       "pct_to_entry": 131.5,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-20",
@@ -2923,7 +2923,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -2939,7 +2939,7 @@
       "mean_ratio": 2.6386,
       "signal": "normal",
       "pct_to_entry": 30.3,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-20",
@@ -3347,7 +3347,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -3363,7 +3363,7 @@
       "mean_ratio": 1.3773,
       "signal": "normal",
       "pct_to_entry": 33.1,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-20",
@@ -3771,7 +3771,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -3787,7 +3787,7 @@
       "mean_ratio": 0.0015,
       "signal": "entry",
       "pct_to_entry": 112.1,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-19",
@@ -4201,7 +4201,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -4217,7 +4217,7 @@
       "mean_ratio": 0.0249,
       "signal": "active",
       "pct_to_entry": 125.5,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-20",
@@ -4625,7 +4625,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -4635,13 +4635,13 @@
       "ticker_b": "GC=F",
       "theme": "Dollar confidence",
       "category": "watch",
-      "cur_z": -2.382,
+      "cur_z": -2.383,
       "prev_z": -2.164,
       "cur_ratio": 0.021,
       "mean_ratio": 0.0238,
       "signal": "active",
-      "pct_to_entry": 119.1,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "pct_to_entry": 119.2,
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-19",
@@ -4779,7 +4779,7 @@
           -1.665,
           -1.76,
           -2.164,
-          -2.382
+          -2.383
         ],
         "ratios": [
           0.022,
@@ -4917,7 +4917,7 @@
           98.83,
           98.9,
           98.8,
-          99.001
+          98.991
         ],
         "prices_b": [
           4506.2998,
@@ -5055,7 +5055,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     },
@@ -5071,7 +5071,7 @@
       "mean_ratio": 1.435,
       "signal": "watch",
       "pct_to_entry": 86.1,
-      "last_updated": "2026-08-24 21:15 UTC",
+      "last_updated": "2026-08-24 21:49 UTC",
       "history": {
         "dates": [
           "2026-05-19",
@@ -5485,7 +5485,7 @@
           "close",
           "close",
           "close",
-          "21:15 UTC"
+          "21:49 UTC"
         ]
       }
     }
