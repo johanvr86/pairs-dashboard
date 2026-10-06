@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-05 21:20 UTC",
+  "updated": "2026-10-06 01:47 UTC",
   "entry_z": 2.0,
   "lookback": 60,
   "pairs": {
@@ -9,13 +9,13 @@
       "ticker_b": "CL=F",
       "theme": "Oil pairs",
       "category": "bot",
-      "cur_z": 1.847,
+      "cur_z": 1.843,
       "prev_z": 1.897,
-      "cur_ratio": 1.1234,
-      "mean_ratio": 1.072,
+      "cur_ratio": 1.1233,
+      "mean_ratio": 1.0719,
       "signal": "watch",
-      "pct_to_entry": 92.3,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "pct_to_entry": 92.2,
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -155,7 +155,7 @@
           2.922,
           1.21,
           1.897,
-          1.847
+          1.843
         ],
         "ratios": [
           1.0492,
@@ -225,7 +225,7 @@
           1.145,
           1.1016,
           1.1223,
-          1.1234
+          1.1233
         ],
         "prices_a": [
           72.92,
@@ -295,7 +295,7 @@
           103.53,
           102.31,
           102.25,
-          100.32
+          100.5
         ],
         "prices_b": [
           69.5,
@@ -365,7 +365,7 @@
           90.42,
           92.87,
           91.11,
-          89.3
+          89.47
         ],
         "timestamps": [
           "close",
@@ -435,7 +435,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -445,13 +445,13 @@
       "ticker_b": "GC=F",
       "theme": "AI bubble",
       "category": "bot",
-      "cur_z": 1.981,
+      "cur_z": 2.008,
       "prev_z": 1.855,
-      "cur_ratio": 7.5198,
-      "mean_ratio": 6.8607,
-      "signal": "watch",
-      "pct_to_entry": 99.1,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "cur_ratio": 7.5298,
+      "mean_ratio": 6.8608,
+      "signal": "entry",
+      "pct_to_entry": 100.4,
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -591,7 +591,7 @@
           1.511,
           1.456,
           1.855,
-          1.981
+          2.008
         ],
         "ratios": [
           7.5581,
@@ -661,7 +661,7 @@
           7.3324,
           7.3199,
           7.4626,
-          7.5198
+          7.5298
         ],
         "prices_a": [
           30523.5,
@@ -731,7 +731,7 @@
           30698.75,
           30760.5,
           31061.75,
-          31339.5
+          31353.25
         ],
         "prices_b": [
           4038.5,
@@ -801,7 +801,7 @@
           4186.7002,
           4202.2998,
           4162.2998,
-          4167.6001
+          4163.8999
         ],
         "timestamps": [
           "close",
@@ -871,7 +871,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -887,7 +887,7 @@
       "mean_ratio": 5.0386,
       "signal": "normal",
       "pct_to_entry": 7.8,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -1307,7 +1307,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -1317,13 +1317,13 @@
       "ticker_b": "",
       "theme": "MACD momentum",
       "category": "bot",
-      "cur_z": -0.396,
+      "cur_z": -0.46,
       "prev_z": -0.758,
-      "cur_ratio": 61.4,
-      "mean_ratio": 62.9169,
+      "cur_ratio": 61.15,
+      "mean_ratio": 62.9127,
       "signal": "normal",
-      "pct_to_entry": 19.8,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "pct_to_entry": 23.0,
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -1463,7 +1463,7 @@
           -0.711,
           -0.566,
           -0.758,
-          -0.396
+          -0.46
         ],
         "ratios": [
           59.477,
@@ -1533,7 +1533,7 @@
           60.098,
           60.725,
           59.977,
-          61.4
+          61.15
         ],
         "prices_a": [
           59.477,
@@ -1603,7 +1603,7 @@
           60.098,
           60.725,
           59.977,
-          61.4
+          61.15
         ],
         "prices_b": [],
         "timestamps": [
@@ -1674,7 +1674,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -1684,13 +1684,13 @@
       "ticker_b": "ZS=F",
       "theme": "Ukraine",
       "category": "watch",
-      "cur_z": -0.888,
+      "cur_z": -0.891,
       "prev_z": -1.193,
       "cur_ratio": 0.5398,
       "mean_ratio": 0.5544,
       "signal": "normal",
-      "pct_to_entry": 44.4,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "pct_to_entry": 44.5,
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -1830,7 +1830,7 @@
           -1.695,
           -1.297,
           -1.193,
-          -0.888
+          -0.891
         ],
         "ratios": [
           0.52,
@@ -1970,7 +1970,7 @@
           675.75,
           682.75,
           683.0,
-          691.5
+          690.5
         ],
         "prices_b": [
           1116.75,
@@ -2040,7 +2040,7 @@
           1293.0,
           1284.0,
           1278.25,
-          1281.0
+          1279.25
         ],
         "timestamps": [
           "close",
@@ -2110,7 +2110,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -2126,7 +2126,7 @@
       "mean_ratio": 1.2586,
       "signal": "normal",
       "pct_to_entry": 58.8,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -2546,7 +2546,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -2556,13 +2556,13 @@
       "ticker_b": "TLT",
       "theme": "Safe haven",
       "category": "watch",
-      "cur_z": 0.373,
+      "cur_z": 0.355,
       "prev_z": 0.274,
-      "cur_ratio": 54.0475,
-      "mean_ratio": 53.0678,
+      "cur_ratio": 53.9995,
+      "mean_ratio": 53.067,
       "signal": "normal",
-      "pct_to_entry": 18.6,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "pct_to_entry": 17.8,
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -2702,7 +2702,7 @@
           0.44,
           0.428,
           0.274,
-          0.373
+          0.355
         ],
         "ratios": [
           47.4635,
@@ -2772,7 +2772,7 @@
           54.0443,
           54.0767,
           53.721,
-          54.0475
+          53.9995
         ],
         "prices_a": [
           4038.5,
@@ -2842,7 +2842,7 @@
           4186.7002,
           4202.2998,
           4162.2998,
-          4167.6001
+          4163.8999
         ],
         "prices_b": [
           85.0865,
@@ -2866,7 +2866,7 @@
           82.7622,
           83.2465,
           81.8729,
-          81.8235,
+          81.8234,
           81.2799,
           81.5478,
           82.1729,
@@ -2881,7 +2881,7 @@
           80.7144,
           81.022,
           82.3713,
-          81.6967,
+          81.6966,
           81.4089,
           81.9149,
           82.8178,
@@ -2982,7 +2982,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -2992,13 +2992,13 @@
       "ticker_b": "JETS",
       "theme": "Iran/Hormuz",
       "category": "watch",
-      "cur_z": 0.626,
+      "cur_z": 0.641,
       "prev_z": 0.741,
-      "cur_ratio": 3.2019,
-      "mean_ratio": 2.9581,
+      "cur_ratio": 3.208,
+      "mean_ratio": 2.9582,
       "signal": "normal",
-      "pct_to_entry": 31.3,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "pct_to_entry": 32.0,
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -3138,7 +3138,7 @@
           0.717,
           0.934,
           0.741,
-          0.626
+          0.641
         ],
         "ratios": [
           2.0921,
@@ -3208,7 +3208,7 @@
           3.2041,
           3.3062,
           3.2377,
-          3.2019
+          3.208
         ],
         "prices_a": [
           69.5,
@@ -3278,7 +3278,7 @@
           90.42,
           92.87,
           91.11,
-          89.3
+          89.47
         ],
         "prices_b": [
           33.22,
@@ -3418,7 +3418,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -3434,7 +3434,7 @@
       "mean_ratio": 1.3615,
       "signal": "normal",
       "pct_to_entry": 1.8,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -3854,7 +3854,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -3864,13 +3864,13 @@
       "ticker_b": "GC=F",
       "theme": "Growth signal",
       "category": "watch",
-      "cur_z": 1.412,
+      "cur_z": 1.575,
       "prev_z": 0.877,
       "cur_ratio": 0.0016,
       "mean_ratio": 0.0015,
-      "signal": "normal",
-      "pct_to_entry": 70.6,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "signal": "watch",
+      "pct_to_entry": 78.8,
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -4010,7 +4010,7 @@
           1.048,
           0.582,
           0.877,
-          1.412
+          1.575
         ],
         "ratios": [
           0.0015,
@@ -4150,7 +4150,7 @@
           6.559,
           6.482,
           6.492,
-          6.6325
+          6.665
         ],
         "prices_b": [
           4038.5,
@@ -4220,7 +4220,7 @@
           4186.7002,
           4202.2998,
           4162.2998,
-          4167.6001
+          4163.0
         ],
         "timestamps": [
           "close",
@@ -4290,7 +4290,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -4300,13 +4300,13 @@
       "ticker_b": "GC=F",
       "theme": "Rearmament",
       "category": "watch",
-      "cur_z": 0.827,
+      "cur_z": 0.865,
       "prev_z": 0.375,
-      "cur_ratio": 0.0252,
+      "cur_ratio": 0.0253,
       "mean_ratio": 0.0246,
       "signal": "normal",
-      "pct_to_entry": 41.3,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "pct_to_entry": 43.2,
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -4446,7 +4446,7 @@
           -0.191,
           -0.466,
           0.375,
-          0.827
+          0.865
         ],
         "ratios": [
           0.0244,
@@ -4516,7 +4516,7 @@
           0.0244,
           0.0242,
           0.0249,
-          0.0252
+          0.0253
         ],
         "prices_a": [
           98.41,
@@ -4586,7 +4586,7 @@
           102.26,
           101.81,
           103.53,
-          105.127
+          105.13
         ],
         "prices_b": [
           4038.5,
@@ -4656,7 +4656,7 @@
           4186.7002,
           4202.2998,
           4162.2998,
-          4167.6001
+          4163.0
         ],
         "timestamps": [
           "close",
@@ -4726,7 +4726,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -4736,13 +4736,13 @@
       "ticker_b": "GC=F",
       "theme": "Dollar confidence",
       "category": "watch",
-      "cur_z": 0.979,
+      "cur_z": 0.993,
       "prev_z": 0.967,
       "cur_ratio": 0.0245,
       "mean_ratio": 0.0233,
       "signal": "normal",
-      "pct_to_entry": 48.9,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "pct_to_entry": 49.6,
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -4882,7 +4882,7 @@
           0.754,
           0.816,
           0.967,
-          0.979
+          0.993
         ],
         "ratios": [
           0.0251,
@@ -5022,7 +5022,7 @@
           101.45,
           102.1,
           101.93,
-          102.121
+          102.08
         ],
         "prices_b": [
           4038.5,
@@ -5092,7 +5092,7 @@
           4186.7002,
           4202.2998,
           4162.2998,
-          4167.6001
+          4163.0
         ],
         "timestamps": [
           "close",
@@ -5162,7 +5162,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     },
@@ -5172,13 +5172,13 @@
       "ticker_b": "ZC=F",
       "theme": "Ukraine grains",
       "category": "watch",
-      "cur_z": -0.634,
+      "cur_z": -0.621,
       "prev_z": -0.967,
-      "cur_ratio": 1.3899,
+      "cur_ratio": 1.3907,
       "mean_ratio": 1.4258,
       "signal": "normal",
-      "pct_to_entry": 31.7,
-      "last_updated": "2026-10-05 21:20 UTC",
+      "pct_to_entry": 31.1,
+      "last_updated": "2026-10-06 01:47 UTC",
       "history": {
         "dates": [
           "2026-06-30",
@@ -5318,7 +5318,7 @@
           -1.412,
           -1.22,
           -0.967,
-          -0.634
+          -0.621
         ],
         "ratios": [
           1.407,
@@ -5388,7 +5388,7 @@
           1.3495,
           1.3594,
           1.3722,
-          1.3899
+          1.3907
         ],
         "prices_a": [
           580.75,
@@ -5458,7 +5458,7 @@
           675.75,
           682.75,
           683.0,
-          691.5
+          690.5
         ],
         "prices_b": [
           412.75,
@@ -5528,7 +5528,7 @@
           500.75,
           502.25,
           497.75,
-          497.5
+          496.5
         ],
         "timestamps": [
           "close",
@@ -5598,7 +5598,7 @@
           "close",
           "close",
           "close",
-          "21:20 UTC"
+          "close"
         ]
       }
     }
